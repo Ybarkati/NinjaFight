@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ninja fight</title>
+    <link rel="stylesheet" href="styleLevel1.css">
+  </head>
+  <body>
+    <div class="containerRound">
+      <div class="round-result-bar">
+          <div class="player">
+            <div class="player-image">
+              <!-- Player 1 Image -->
+              <img src="player1.png" alt="Player 1" >
+            </div>
+            <div class="player-hull-bar">
+              <div class="bar-level" id="player1-hull-level"></div>
+            </div>
+          </div>
+    
+          <div class="timer">
+            <button id="Exit"><a href="indexMain.html">Exit</a></button>
+            <button id="timer-button" onclick="toggleTimer()">Play</button>
+            <div id="timer-value">00:00</div>
+          </div>
+    
+          <div class="player">
+            <div class="player-image">
+              <!-- Player 2 Image -->
+              <img src="player2.png" alt="Player 2" />
+            </div>
+            <div class="player-hull-bar">
+              <div class="bar-level" id="player2-hull-level"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <div class="containerCanvas">
+    <canvas id="gameCanvas" width="1200" height="700"></canvas>
+  </div>
+  <audio id="background-music" loop>
+    <source src="backgroundMusicLevel1.mp3" type="audio/mpeg">
+  </audio>
+  
+  <button id="mute-toggle">
+    <span id="mute-icon">&#128266;</span>
+    <span id="mute-label">Mute</span>
+  </button>
+
+    <script src="scriptLevel1.js">
+
+    </script>
+  </body>
+</html>
+
