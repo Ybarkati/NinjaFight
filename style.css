@@ -1,3 +1,7 @@
+@font-face {
+	font-family: 'ninjaFont';
+	src: url('ninjaFont.otf') format('opentype');
+  }
 body {
     background-image: url('MainBackground.jpg' );
     background-size: cover;
@@ -36,8 +40,10 @@ h2{
     border-end-end-radius: 30px;
     overflow: auto;
     font-size: 20px;
-    color: #150a0a;
-    font-family: 'Courier New', Courier, monospace;
+    color: #1a0d0d;
+	box-sizing: border-box;
+	padding: 5px;
+    font-family: ninjaFont;
     
 }
 /* scrolling bar */
@@ -81,11 +87,12 @@ h2::-webkit-scrollbar {
     border-radius: 20px;
     box-sizing: border-box;
     text-align: center;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: bold;
     color: #fafafa;
     padding: 12px;
     cursor: pointer;
+	font-family: ninjaFont;
     
 }
 .sideBarr{
@@ -187,7 +194,7 @@ h2::-webkit-scrollbar {
 .nav strong{
 	height:50px;
 	color: #dddddd;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: ninjaFont;
 	font-size: 16px;
 	text-align: left;
 	line-height: 50px;
@@ -219,7 +226,7 @@ h2::-webkit-scrollbar {
 }
 .nav ul li a{
 	color: #ffffff;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: ninjaFont;
 	font-size: 16px;
 	text-transform: capitalize;
 	text-decoration: none;
@@ -287,6 +294,9 @@ h2::-webkit-scrollbar {
   
   #mute-toggle.muted #unmute-label {
     display: inline;
+  }
+  span{
+	font-family: ninjaFont;;
   }
   /*   */
 

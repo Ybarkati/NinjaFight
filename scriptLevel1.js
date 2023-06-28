@@ -37,6 +37,7 @@ function updateHullLevels(player1Hull, player2Hull) {
 }
 
 //////////////////////////////////////////////
+let WinContainer=document.querySelector(".WinContainer")
 /////////////////////////////
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
@@ -109,6 +110,23 @@ function draw() {
       player2.attack()
       updateHullLevels((player1.hull/player1.FullHull)*100, (player2.hull/player2.FullHull)*100)
       console.log("Player 2 is hit!");
+      ////////
+      if(player2.hull<=0){
+        WinContainer.classList.remove("hidden")
+        document.querySelector(".winText").textContent="THE PLAYER 1 WON"
+        let winButton=document.querySelector(".winButton")
+        winButton.addEventListener("click",e=>{
+          if (e.target.className=="exitButton"){
+            WinContainer.classList.add("hidden")
+          }else if (e.target.className=="Next"){
+            player2.hull=player2.FullHull
+            player1.hull=player1.FullHull
+            updateHullLevels((player1.hull/player1.FullHull)*100, (player2.hull/player2.FullHull)*100)
+            WinContainer.classList.add("hidden")
+          }
+        })
+      }
+      ///////////
       player1.arrows.splice(arrowIndex, 1);
     }
   });
@@ -123,6 +141,23 @@ function draw() {
       player1.attack()
       updateHullLevels((player1.hull/player1.FullHull)*100, (player2.hull/player2.FullHull)*100)
       console.log("Player 1 is hit!");
+            ////////
+            if(player1.hull<=0){
+              WinContainer.classList.remove("hidden")
+              document.querySelector(".winText").textContent="THE PLAYER 2 WON"
+              let winButton=document.querySelector(".winButton")
+              winButton.addEventListener("click",e=>{
+                if (e.target.className=="exitButton"){
+                  WinContainer.classList.add("hidden")
+                }else if (e.target.className=="Next"){
+                  player2.hull=player2.FullHull
+                  player1.hull=player1.FullHull
+                  updateHullLevels((player1.hull/player1.FullHull)*100, (player2.hull/player2.FullHull)*100)
+                  WinContainer.classList.add("hidden")
+                }
+              })
+            }
+            ///////////
       // Remove the arrow from player2's arrows array
       player2.arrows.splice(arrowIndex, 1);
     }

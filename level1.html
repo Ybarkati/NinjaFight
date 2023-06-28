@@ -5,8 +5,19 @@
     <link rel="stylesheet" href="styleLevel1.css">
   </head>
   <body>
-    <div class="containerRound">
-      <div class="round-result-bar">
+    <div class="WinContainer hidden">
+      <div class="winPage">
+          <div class="winText">THE PLAYER 1 WON</div>
+          <div class="winButton">
+              <div class="exitButton"><a href="indexMain.html">Exit</a></div>
+              <div class="Next">Next round</div>
+          </div>
+      </div>
+      </div>
+  
+  <div class="containerCanvas">
+    <div class="containerRound ">
+      <div class="round-result-bar ">
           <div class="player">
             <div class="player-image">
               <!-- Player 1 Image -->
@@ -15,7 +26,7 @@
             <div class="player-hull-bar">
               <div class="bar-level" id="player1-hull-level"></div>
             </div>
-          </div>
+    </div>
     
           <div class="timer">
             <button id="Exit"><a href="indexMain.html">Exit</a></button>
@@ -34,7 +45,6 @@
           </div>
         </div>
       </div>
-  <div class="containerCanvas">
     <canvas id="gameCanvas" width="1200" height="700"></canvas>
   </div>
   <audio id="background-music" loop>
