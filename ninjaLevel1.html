@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ninjaFight</title>
+    <link rel="stylesheet" href="ninjaLevel1.css">
+</head>
+<body>
+    
+    <div id="container">
+        <div id="ninja">
+            <img src="stop.gif" alt="" >
+        </div>
+        <div id="block">
+            <img src="thorns.png" alt="blocks">
+        </div>
+        <div id="road"> 
+            <img src="road.png" alt="road">
+        </div>
+        <div id="cloud">
+            <img src="cloud.png" alt="cloud">
+        </div>
+        
+        <!-- <div id="gameOver">Game Over</div> -->
+       
+    </div>
+    
+    <div class="Absolute" id="gameOver">
+        <div class="barRound">
+            <div class="round">round 1</div>
+            <div class="bar" id="score">
+                <div id="flag"> <img src="flag.png" width="50px" height="50px"></div>
+              </div>
+        </div>
+        
+        <div class="winPage">
+            <div class="winText">THE PLAYER 1 W  ON</div>
+            <div class="winButton">
+                <div class="Next">Press space to go to next round</div>
+                <div class="exitButton"><a href="home.html">Exit</a></div>
+               
+            </div>
+        </div>
+        </div>
+        <audio id="background-music" loop>
+            <source src="ninjaBackMusic.mp3" type="audio/mpeg">
+          </audio>
+          
+          <button id="mute-toggle">
+            <span id="mute-icon">&#128266;</span>
+            <span id="mute-label">Mute</span>
+          </button>
+    <script src="ninjaLevel1.js"></script>
+</body>
+</html>
